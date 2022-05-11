@@ -1,0 +1,11 @@
+.mb-4,
+.my-4 {
+  margin-block: 10px;
+  background-color: white;
+  padding: 1vw;
+}
+
+p.dark-grey-text {
+  padding-left: 15px;
+  padding-right: 15px;
+}
