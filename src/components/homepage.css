@@ -637,7 +637,7 @@ a {
 } */
 
 @media (max-device-width:640px),
-screen and (max-width:640px)  {
+ (max-width:640px)  {
   .startingclass,
   .endingclass {
     font-size: 1.5vh !important;
