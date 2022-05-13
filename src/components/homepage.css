@@ -636,7 +636,7 @@ a {
   background-color: red
 } */
 
-@media screen and (max-device-width:640px),
+@media (max-device-width:640px),
 screen and (max-width:640px)  {
   .startingclass,
   .endingclass {
