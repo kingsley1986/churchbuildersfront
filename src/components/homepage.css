@@ -631,6 +631,27 @@ a {
   font-size: 3.3vh;
 }
 
+/* .startingclass,
+.endingclass {
+  background-color: red
+} */
+
+@media screen and (max-device-width:640px),
+screen and (max-width:640px)  {
+  .startingclass,
+  .endingclass {
+    font-size: 1.5vh !important;
+  }
+
+  p.card-text.text-center {
+    font-size: 1.9vh
+  }
+.makeStyles-root-1 {
+  padding: 6px !important;
+}
+
+}
+
 .cat {
   display: inline-block;
   margin-bottom: 1rem;
