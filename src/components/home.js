@@ -285,6 +285,7 @@ export default function Home(props) {
   ));
 
   const change = `style={{padding: "400 !important"}}`
+  const mine = {width: 530}
 
   return (
     <div>
@@ -435,7 +436,7 @@ export default function Home(props) {
           rowHeight={370}
           gap={2}
           className={classes.gridList}
-          sx={{ p: 4 }}
+          sx={matches ? {p:1} : { p: 5 }}
           
         >
           {programData.length > 0 &&
