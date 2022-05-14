@@ -284,6 +284,8 @@ export default function Home(props) {
     <EventLive live={live} key={k} />
   ));
 
+  const change = `style={{padding: "400 !important"}}`
+
   return (
     <div>
       <Slider className="slider-wrapper" autoplay={3000} infinite="true">
@@ -382,7 +384,6 @@ export default function Home(props) {
                               {moment(slide.startingDate).format("LLLL")}
                             </span>
                           </div>
-                          {/* <i className="fas fa-users text-info" />{" "} */}
                           <div className="views">
                             <strong style={{paddingRight: 17}}>Closing </strong>{" "}
                             <span class="ingredient endingclass" style={{}}>
@@ -428,12 +429,14 @@ export default function Home(props) {
         <div className="programlist">These are list of our Programs and Activities</div>
 
       </div>
-      <div className={classes.root} style={{ padding: 35 }}>
+      <div className={classes.root} >
         <ImageList
           cols={matches ? 1 : 3}
           rowHeight={370}
           gap={2}
           className={classes.gridList}
+          sx={{ p: 4 }}
+          
         >
           {programData.length > 0 &&
             programData.map((tile, index) => {

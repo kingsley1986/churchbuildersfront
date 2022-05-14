@@ -636,8 +636,8 @@ a {
   background-color: red
 } */
 
-@media (max-device-width:640px),
- (max-width:640px)  {
+@media screen and (max-device-width:640px),
+screen and (max-width:640px)  {
   .startingclass,
   .endingclass {
     font-size: 1.5vh !important;
@@ -646,8 +646,8 @@ a {
   p.card-text.text-center {
     font-size: 1.9vh
   }
-.makeStyles-root-1 {
-  padding: 6px !important;
+.css-trzyqv-MuiImageList-root {
+  padding: 5px !important;
 }
 
 }
