@@ -284,9 +284,6 @@ export default function Home(props) {
     <EventLive live={live} key={k} />
   ));
 
-  const change = `style={{padding: "400 !important"}}`
-  const mine = {width: 530}
-
   return (
     <div>
       <Slider className="slider-wrapper" autoplay={3000} infinite="true">

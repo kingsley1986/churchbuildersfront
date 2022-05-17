@@ -44,14 +44,14 @@ export default function EventAndComments(props) {
 
       const {id} = useParams()
   const EventComment = (props) => (
-    <div className={classes.root}>
+    <div className={classes.root} >
       <Paper className={classes.paper}>
-        <Grid container wrap="nowrap" spacing={2}>
-          <Grid item>
-            <Avatar>W</Avatar>
+        <Grid container wrap="nowrap" gap={2} style={{marginTop: 10}}>
+          <Grid item >
+            {/* <Avatar>W</Avatar> */}
           </Grid>
           <Grid item xs>
-            <Typography>{props.comment.name}</Typography>
+            <Typography style={{color: "#E9967A	"}}>{props.comment.name}</Typography>
             <Typography>{props.comment.description}</Typography>
             <Typography>{props.comment.createdAt}</Typography>
           </Grid>
@@ -299,6 +299,9 @@ export default function EventAndComments(props) {
       });
   });
 
+    const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
+
   return (
     <Grid
       container
@@ -307,8 +310,9 @@ export default function EventAndComments(props) {
       alignItems="center"
       justify="center"
       style={{ minHeight: "100vh" }}
+      sx={matches ? {p:1} : { p: 40, marginTop: -37 }}
     >
-      <Card className={classes.root} style={{ marginTop: "5vw", width: "50%" }}>
+      <Card className={classes.root} style={{}} > 
         <h3
           style={{
             background: "	#800000",
@@ -422,16 +426,16 @@ export default function EventAndComments(props) {
         <Button type="submit" fullWidth variant="contained" color="primary">
           Create Comment
         </Button>
-        <button
+        {/* <button
           type="submit"
           id="myBtn"
           class="btn btn-success"
           onClick={onDeleteEve}
         >
           Delete
-        </button>
+        </button> */}
       </form>
-      <CardContent style={{width: "80%"}}>{eventCommentList}</CardContent>
+      <CardContent >{eventCommentList}</CardContent>
     </Grid>
   );
 }

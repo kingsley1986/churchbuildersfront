@@ -62,7 +62,7 @@ export default function Program() {
         rowHeight={550}
         cols={matches ? 1 : 3}
         className={classes.gridList}
-        gap={12}
+        gap={19}
         style={{ background: "#A52A2A		" }}
       >
         {programData.length > 0 &&
@@ -93,7 +93,7 @@ export default function Program() {
                     padding: 7,
                   }}
                 >
-                  {tile.description.substring(0, 222)}..
+                  {tile.description.substring(0, 100)}..
                 </Typography>
               </ImageListItem>
             );

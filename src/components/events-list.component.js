@@ -114,7 +114,7 @@ export default function EventsList() {
   return (
     <div className={classes.root} style={{ padding: "2.5vw", marginTop: 60 }}>
       <ImageList
-        cellHeigh={420}
+        rowHeigh={420}
         className={classes.gridList}
         gap={12}
         cols={matchesm ? 1 : matchesMd ? 2 : 3}
