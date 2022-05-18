@@ -236,43 +236,32 @@ export default function ProgramComments(props) {
       : comments.length + " " + "Comment";
 
   return (
-    <div className="container-fluid p-0" style={{ marginTop: "3vw" }}>
-      <div className="row  justify-content-center text-center">
-        <div className="col-12 col-lg-8 col-md-6 col-lg-4">
-          <div className="card">
+    <div className="center container-fluid p-0" style={{ marginTop: "3vw",  }}>
+      <div className="justify-content-center text-center">
+        <div className="col-12 col-lg-8 col-md-6 col-lg-4" style={{width: '90rem', margin: "auto"}}>
+          <div className="card ">
             <img
               className="card-img"
               src={programs.programImage}
               alt="Bologna"
             />
-            <div className="card-img-overlay">
+            {/* <div className="card-img-overlay">
               <a href="#" className="btn btn-light btn-sm">
                 Cooking
               </a>
-            </div>
+            </div> */}
             <div className="card-body">
-              <h4 className="card-title">{programs.title}</h4>
-              <small className="text-muted cat">
+              <h2 className="card-title" style={{position: "relative", top: 40, paddingTop: 30, paddingBottom: 60}} >{programs.title}</h2>
+              {/* <small className="text-muted cat">
                 <i className="far fa-clock text-info" /> {moment(programs.createdAt).format("llll")}
                 <i className="fas fa-users text-info" />
-              </small>
-              <p className="card-text" style={{
-
-              }}>{programs.description}</p>
+              </small> */}
+              <p className="card-text" style={{}}>{programs.description}</p>
               <a href="#" className="btn btn-outline-success">
                 {commentLengt}
               </a>
             </div>
-            <div className="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
-              <div className="views">
-                {" "}
-                {moment(programs.createdAt).format("llll")}
-              </div>
-              {/* <div className="stats">
-                <i className="far fa-eye" /> 1347
-                <i className="far fa-comment" /> 12
-              </div> */}
-            </div>
+            
           </div>
         </div>
         <div>

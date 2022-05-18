@@ -59,11 +59,13 @@ export default function Program() {
     <div className={classes.root} style={{ padding: "3vw" }}>
       <ImageListItem key="Subheader" style={{ height: "auto" }}></ImageListItem>
       <ImageList
-        rowHeight={550}
+        rowHeight={345}
         cols={matches ? 1 : 3}
         className={classes.gridList}
-        gap={19}
-        style={{ background: "#A52A2A		" }}
+        gap={ matches ? 30 : 19}
+          // sx={matches ? {p:1} : { p: 5 }}
+
+        style={{  position: "relative" }}
       >
         {programData.length > 0 &&
           programData.map((tile, index) => {
@@ -72,17 +74,19 @@ export default function Program() {
                 key={Math.floor(Math.random() * new Date().getTime())}
                 component={Link}
                 to={"/programs/" + tile._id + "/programcomments"}
-                style={{ textDecoration: "none", color: "black" }}
+                style={{ textDecoration: "none", color: "black", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" }}
               >
                 <img
-                  src={tile.programImage}
+                
                   alt={tile.title}
                   className={classes.image}
+                  
+                  src={tile.programImage}
+                  style={{maxHeight: "230px"}}
                 />
                 <ImageListItemBar
-                  titleposition="top"
                   title={tile.title}
-                // style={{ height: 400 }}
+                style={{position: "relative", background: "#A52A2A", fontWeight: "bolder", fontSize: '128px'}} 
                 />
 
                 <Typography
@@ -90,7 +94,7 @@ export default function Program() {
                   style={{
                     borderBottom: "2px solid",
                     background: "white",
-                    padding: 7,
+                    // padding: 7,
                   }}
                 >
                   {tile.description.substring(0, 100)}..
