@@ -36,6 +36,10 @@ import AddComingWithModal from "./components/coming-with-modal.component";
 import Header from "./components/Header";
 import Home from "./components/home";
 import Footer from "./components/footer";
+import About from "./components/about";
+
+
+import ContactForm from "./components/contactForm";
 
 export default function App(props) {
   return (
@@ -48,6 +52,9 @@ export default function App(props) {
         <Route path="/events" element={<EventsList/>} />
         <Route path="/events/:id/eventcomments" element={<EventAndComments />} />
         <Route path="/galleries" element={<GalleryList/>} />
+        <Route path="/contacts" element={<ContactForm/>} />
+        <Route path="/about" element={<About/>} />
+
       </Routes>
             <Footer />
 

@@ -1,0 +1,37 @@
+.center_div {
+    margin: 0 auto;
+    background: red;
+    /* width: 80%; */
+    margin-top: 30px;
+    background: url("https://christianstt.com/wp-content/uploads/2014/03/Prayer-For-Unity-in-the-Body-of-Christ.jpg");
+}
+
+.contactFormApp {
+    max-width: 485px;
+    margin: 0 auto;
+}
+
+.contactinput,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgb(10, 90, 17);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #29a72d;
+    color: white;
+    padding: 12px 20px;
+    border: 2px solid rgba(67, 175, 76, 0.623);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}

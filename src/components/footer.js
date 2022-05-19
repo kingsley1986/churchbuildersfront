@@ -41,7 +41,7 @@ export default function Footer(props) {
                 <i className="far fa-envelope-open" />
                 <div className="cta-text">
                   <h4>Mail us</h4>
-                  <span>thechurchbuilders@gmail.com</span>
+                  <span>theyouthbuilders2020@gmail.com</span>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Footer(props) {
                 </div>
                 <div className="footer-social-icon">
                   <span>Follow us</span>
-                  <a href="#">
+                  <a href="https://www.facebook.com/The-Youth-Builders-103145012059334/">
                     <i className="fab fa-facebook-f facebook-bg" />
                   </a>
                   <a href="#">
@@ -88,24 +88,20 @@ export default function Footer(props) {
                 </div>
                 <ul>
                   <li>
-                    <a href="#">Home</a>
-                  </li>
-                  <li>
-                    <a href="#">about</a>
+                    <a href="/">Home</a>
                   </li>
                 
-                  
                   <li>
-                    <a href="#">Contact</a>
+                    <a href="/contacts">Contact</a>
                   </li>
                   <li>
-                    <a href="#">About us</a>
+                    <a href="/about">About us</a>
                   </li>
                   <li>
-                    <a href="#">Programs</a>
+                    <a href="/programs">Programs</a>
                   </li>
                   <li>
-                    <a href="#">Events</a>
+                    <a href="/events">Events</a>
                   </li>
                 </ul>
               </div>

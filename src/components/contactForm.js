@@ -8,39 +8,41 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import env from "react-dotenv";
 
-export default function ContactForm(props) {
-  const [contact, setContact] = useState([]);
+import "../components/contactform.css";
 
-  const [verified, setVerified] = useState(false);
-  const [error, setError] = useState("");
+
+export default function ContactForm(props) {
+  const initialValues = { name: "", email: "", request: "" };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
   const [token, setToken] = useState("");
   const reCaptcha = useRef();
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
   const onPageLoad = () => { };
   useEffect(() => {
     onPageLoad();
   }, []);
 
-  const [email, setEmail] = React.useState("");
-  const [name, setName] = React.useState("");
-  const [request, setRequest] = React.useState("");
-
-  const onSubmit = useCallback((e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!token) {
-      alert("Yoou must verify the captcha");
-      setError("Yoou must verify the captcha");
-    } else {
-      setError("");
-      setName("");
-      setEmail("");
-      setRequest("");
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit && token) {
+      console.log(formValues);
 
       axios
         .post("https://cryptic-shelf-72177.herokuapp.com/contact_form", {
-          name: name,
-          email: email,
-          request: request,
+         ...formValues,
           token,
         })
 
@@ -50,64 +52,92 @@ export default function ContactForm(props) {
         })
 
         .catch(function (err) {
-          setError(err);
           console.log(err);
         })
         .finally(() => {
+          for (const key in formValues) {
+            if (formValues.hasOwnProperty(key)) {
+              formValues[key] = ""
+            }
+          }
+
           reCaptcha.current.reset();
           setToken("");
         });
+    
     }
-  });
-  const handleChange = (parameter) => (event) => {
-    if (parameter === "name") {
-      setName(event.target.value);
+  }, [formErrors]);
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!values.name) {
+      errors.name = "name is required!";
     }
-    if (parameter === "email") {
-      setEmail(event.target.value);
+    if (!values.email) {
+      errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "This is not a valid email format!";
     }
-    if (parameter === "request") {
-      setRequest(event.target.value);
+    if (!values.request) {
+      errors.request = "request is required";
+    } else if (values.request.length < 4) {
+      errors.request = "Message must be more than 4 characters";
+    }else if(!token) {
+      errors.token = "Verify that you are not a robot"
+    
     }
+    return errors;
   };
 
   return (
-    <div>
+    <div class="container center_div">
+       {Object.keys(formErrors).length === 0 && isSubmit && token ? (
+        <div className="ui message success">Signed in successfully</div>
+      ) : (
+        <pre>{(formValues, undefined)}</pre>
+      )}
       <div className="contactFormApp">
         <p>Send your prayer request here</p>
         <div>
-          <form onSubmit={onSubmit}>
+          <form onSubmit={handleSubmit}>
+            
             <label>Name</label>
+              <p style={{color: "red"}}>{formErrors.name}</p>
+
             <input
               className="contactinput"
               type="text"
               id="fname"
               name="name"
               placeholder="Your name.."
-              value={name}
-              onChange={handleChange("name")}
+               value={formValues.name}
+              onChange={handleChange}
             />
 
             <label>Email</label>
+            <p style={{color: "red"}}>{formErrors.email}</p>
             <input
               className="contactinput"
               type="email"
               id="email"
               name="email"
               placeholder="Your email"
-              value={email}
-              onChange={handleChange("email")}
+              value={formValues.email}
+              onChange={handleChange}
             />
 
             <label>Message</label>
+            <p style={{color: "red"}}>{formErrors.request}</p>
             <textarea
               className="contactinput"
-              value={request}
               placeholder="Type you message here.."
-              onChange={handleChange("request")}
+                type="textarea"
+              name="request"
+               value={formValues.request}
+              onChange={handleChange}
             />
              <div className="captcha" style={{transform:"scale(0.70)", transformOrigin:"0 0", textAlign: "center"}}>
-
+            <p style={{color: "red", fontSize: 20}}>{formErrors.token}</p>
             <ReCAPTCHA
             
               ref={reCaptcha}
@@ -124,3 +154,4 @@ export default function ContactForm(props) {
     </div>
   );
 }
+

@@ -729,101 +729,18 @@ screen and (max-width:640px)  {
   color: #fff;
   text-decoration: none;
 }
-/* 
-.btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #ee0979 0%,
-    #ff6a00 51%,
-    #ee0979 100%
-  );
-}
-.btn-grad {
-  margin: 10px;
-  padding: 5px 7px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
 
-.btn-grad:hover {
-  background-position: right center; 
-  color: #fff;
-  text-decoration: none;
-} */
 
-/* events slider link ends here  */
 
-/* contact form started here  */
 
-/* * {
-  box-sizing: border-box;
-  margin-top: 50px;
-} */
-.contactFormApp {
-  max-width: 485px;
-  margin: 0 auto;
-}
-/* p {
-  text-align: center;
-  font-weight: 500;
-  font-size: 28px;
-} */
-.center_div {
-  margin: 0 auto;
-  /* width: 80%; */
-  background: url("https://christianstt.com/wp-content/uploads/2014/03/Prayer-For-Unity-in-the-Body-of-Christ.jpg");
-}
-
-/* input[type="text"],
-input[type="email"],
-select,
-textarea */
-
-.contactinput,
-select {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid rgb(10, 90, 17);
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-button[type="submit"] {
-  background-color: #29a72d;
-  color: white;
-  padding: 12px 20px;
-  border: 2px solid rgba(67, 175, 76, 0.623);
-  border-radius: 4px;
-  cursor: pointer;
-}
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
 .container {
   /* border-radius: 5px; */
   background-color: #f2f2f2;
   padding: 2px;
 }
 
-/* this is for live events styling */
-/* div.MuiCardHeader-content span {
-  color: red;
-  font-size: 3.9vmin;
-  font-weight: bolder;
-  font-style: italic;
-  font-family: Verdana;
-} */
 div.dateevent {
   color: #f70d04;
-  /* font-size: 5vmin; */
 }
 
 .livestartedclass,
