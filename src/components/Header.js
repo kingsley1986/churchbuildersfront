@@ -46,13 +46,13 @@ const NavBar = () => {
 
           </ReactBootStrap.Nav>
           <ReactBootStrap.Nav>
-            {/* <Link to="/deets">
+            <Link to="/videos">
               <ReactBootStrap.Nav.Link style={{
                 color: "#e8491d",
                 fontWeight: "bold", fontSize: "18px", fontWeight: "bolder", borderLeft: "2px dotted lightgrey",
-              }} href="#deets">Contacts</ReactBootStrap.Nav.Link>
+              }} href="/videos">videos</ReactBootStrap.Nav.Link>
 
-            </Link> */}
+            </Link>
             <Link to="/about">
               <ReactBootStrap.Nav.Link style={{ color: "white", fontSize: "18px", fontWeight: "bolder", borderLeft: "2px dotted lightgrey", }} eventKey={2} href="#memes">
                 About Us

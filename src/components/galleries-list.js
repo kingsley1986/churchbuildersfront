@@ -58,7 +58,7 @@ export default function Gallery() {
 
   useEffect(() => {
     axios
-      .get("https://salty-thicket-72247.herokuapp.com/galleries/api")
+      .get("https://cryptic-shelf-72177.herokuapp.com/galleries/api")
       .then((response) => {
         setGalleryData([...response.data]);
       })
@@ -79,7 +79,6 @@ export default function Gallery() {
   return (
     <div className={classes.root}>
       <ImageList cols={4}>
-        className={classes.gridList}
         {/* <GridListTile key="Subheader" cols={2} style={{ height: "auto" }}>
           <ListSubheader component="div">December</ListSubheader>
         </GridListTile> */}
