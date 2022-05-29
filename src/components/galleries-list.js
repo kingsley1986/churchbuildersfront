@@ -16,11 +16,14 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
 import styled from '@emotion/styled';
+import "../components/gallery/style.css"
 
 const useStyles = styled((theme) => ({
   root: {
@@ -44,11 +47,14 @@ const useStyles = styled((theme) => ({
     marginLeft: theme.spacing(2),
     flex: 1,
   },
+ 
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
+
+
 
 export default function Gallery() {
   const classes = useStyles();
@@ -76,18 +82,28 @@ export default function Gallery() {
   const handleClose = () => {
     setSelectedTile(null);
   };
+
+    const theme = useTheme();
+
+
+    const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <div className={classes.root}>
-      <ImageList cols={4}>
+    <div className={classes.root }>
+      <ImageList cols={matches ? 2 : 4}  >
         {/* <GridListTile key="Subheader" cols={2} style={{ height: "auto" }}>
           <ListSubheader component="div">December</ListSubheader>
         </GridListTile> */}
         {galleryData.map((tile) => (
-          <ImageListItem key={tile.id}>
-            <img src={tile.galleryImage} alt={tile.title} />
+          <ImageListItem key={tile.id} >
+            <img src={tile.galleryImage} alt={tile.title}
+              
+                  value={tile.id}
+                  onClick={() => handleClickOpen(tile)}
+            />
             <ImageListItemBar
               title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
+              subtitle={<span>{tile.author}</span>}
               actionIcon={
                 <IconButton
                   aria-label={`info about ${tile.title}`}
@@ -119,10 +135,10 @@ export default function Gallery() {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              Sound
+              Close
             </Typography>
             <Button autoFocus color="inherit" onClick={handleClose}>
-              save
+              To Return
             </Button>
           </Toolbar>
         </AppBar>
@@ -132,13 +148,15 @@ export default function Gallery() {
 
         {selectedTile && (
           <img
+          className={"popupimage"}
             style={{
-              display: "block",
-              maxWidth: "930px",
-              maxHeight: "2000px",
-              width: "auto",
-              height: "auto",
+              // display: "block",
+              // maxWidth: "930px",
+              // maxHeight: "2000px",
+              // width: "auto",
+              // height: "700px",
             }}
+            
             src={selectedTile.galleryImage}
           />
         )}

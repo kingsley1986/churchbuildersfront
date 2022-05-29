@@ -1,0 +1,32 @@
+.css-pxxd1-MuiImageListItem-root .MuiImageListItem-img {
+    height: 300px !important
+}
+
+
+.popupimage {
+    /* width:700px;
+    height:900px;
+    object-fit:cover;
+    object-position:50% 50%; */
+transform: scale(0.6, 0.6);
+-ms-transform: scale(0.6, 0.6);
+-webkit-transform: scale(0.6, 0.6);
+}
+
+
+@media (max-height: 600px) {
+    .popupimage {
+        transform: scale(0.9, 0.9);
+-ms-transform: scale(0.9, 0.9);
+-webkit-transform: scale(0.9, 0.9);;
+    }
+}
+
+@media (max-width: 940px) {
+    .popupimage {
+        transform: scale(0.9, 0.9);
+-ms-transform: scale(0.9, 0.9);
+-webkit-transform: scale(0.9, 0.9);;
+    }
+}
+

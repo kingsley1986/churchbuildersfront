@@ -37,6 +37,8 @@ import Header from "./components/Header";
 import Home from "./components/home";
 import Footer from "./components/footer";
 import About from "./components/about";
+import Video from "./components/videos";
+
 
 
 import ContactForm from "./components/contactForm";
@@ -54,6 +56,8 @@ export default function App(props) {
         <Route path="/galleries" element={<GalleryList/>} />
         <Route path="/contacts" element={<ContactForm/>} />
         <Route path="/about" element={<About/>} />
+        <Route path="/videos" element={<Video/>} />
+
 
       </Routes>
             <Footer />
