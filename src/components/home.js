@@ -7,6 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Slider from "react-animated-slider";
 import image1 from "../images/one.jpg";
+import image2 from "../images/youthsone.jpg";
+import image3 from "../images/youthseigt.jpg";
 import "react-animated-slider/build/horizontal.css";
 import "normalize.css/normalize.css";
 import "../components/homepage.css";
@@ -228,30 +230,29 @@ export default function Home(props) {
 
   const content = [
     {
-      title: "Vulputate Mollis Ultricies Fermentum Parturient",
+      title: "Our Youths Department Called The Youth Builders",
       description:
-        "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.",
-      button: "Read More",
-      image: image1,
-      user: "Luan Gjokaj",
+        "we are fully commited in building building youths that will represent the kingdom of God on earth, and be a great examples in our communities",
+      button: "Donate",
+      image: image2,
+      // user: "Luan Gjokaj",
       userProfile: "https://i.imgur.com/JSW6mEk.png",
     },
     {
       title: "Tortor Dapibus Commodo Aenean Quam",
       description:
         "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
-      button: "Discover",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSM5SzNAznPKGcAhoBTQ8ULKCJ20S2ZOE_NxQ&usqp=CAU",
+      button: "Donate",
+      image: image3,
       user: "Erich Behrens",
       userProfile: "https://i.imgur.com/0Clfnu7.png",
     },
     {
-      title: "Phasellus volutpat metus",
+      title: "Our Children Department Called Yeshua Children Ministry",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
-      button: "Buy now",
-      image: "https://i.imgur.com/DvmN8Hx.jpg",
+        "We believe that our children must be trained in the ways of God so that when they grow up they will not depart from it, and we also believe in equipping children with proper education to make them stand out in our society.",
+      button: "Donate",
+      image: image1,
       user: "Bruno Vizovskyy",
       userProfile: "https://i.imgur.com/4KeKvtH.png",
     },
@@ -278,7 +279,7 @@ export default function Home(props) {
   //   });
   //   sendAction.catch((err) => {
   //     alert(err.message);
-  //   });
+  //   });  
   // };
   let eventLive = liveEventData.map((live, k) => (
     <EventLive live={live} key={k} />
