@@ -486,7 +486,7 @@ export default function Home(props) {
                                   " Comic Sans MS, Comic Sans, cursive",
                               }}
                             >
-                              {tile.programtype}
+                              {/* {tile.programtype} */}
                             </span>
 
                             <a className="card-link" href="#" />
