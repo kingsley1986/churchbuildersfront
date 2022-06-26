@@ -15,7 +15,7 @@ import "../components/homepage.css";
 import Slider2 from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Card } from "react-bootstrap";
+// import { Card2 } from "react-bootstrap";
 
 
 import {  makeStyles,  ThemeProvider } from '@mui/styles';
@@ -32,11 +32,11 @@ import ContactForm from "../components/contactForm";
 
 import clsx from "clsx";
 
-import Card2 from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
+import {Card, CardHeader, CardMedia, CardActions, CardContent} from "@mui/material";
+// import CardHeader from "@mui/material/CardHeader";
+// import CardMedia from "@mui/material/CardMedia";
+// import CardContent from "@mui/material/CardContent";
+// import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
@@ -304,12 +304,12 @@ export default function Home(props) {
             </div>
             <section>
               <div>
-                <Card2
+                <Card
                   // style={{ width: "50vh", height: "53vh" }}
                   className={classes.root3}
                 >
                   {eventLive}
-                </Card2>
+                </Card>
               </div>
             </section>
           </div>

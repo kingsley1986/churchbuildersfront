@@ -1,10 +1,8 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
+import {Card, CardHeader, CardMedia, CardActions, CardContent} from "@mui/material";
+
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
