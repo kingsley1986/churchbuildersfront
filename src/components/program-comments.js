@@ -4,9 +4,8 @@ import {useParams } from "react-router-dom";
 import axios from "axios";
 import AddComingWithModal from "../components/coming-with-modal.component";
 import clsx from "clsx";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
-import { useTheme } from "@mui/material/styles";
+import { useTheme, createTheme } from "@mui/material/styles";
 
 // import Card from "@material-ui/core/Card";
 // import CardHeader from "@material-ui/core/CardHeader";
