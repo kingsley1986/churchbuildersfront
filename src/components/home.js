@@ -17,8 +17,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Card } from "react-bootstrap";
 
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { makeStyles } from "@mui/styles";
+
+import {  makeStyles,  ThemeProvider } from '@mui/styles';
+import { useTheme, createTheme } from "@mui/system";
+
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -26,7 +28,6 @@ import ListSubheader from "@mui/material/ListSubheader";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 import ContactForm from "../components/contactForm";
 
 import clsx from "clsx";

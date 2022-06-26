@@ -1,13 +1,14 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { makeStyles } from "@mui/styles";
+
+import {  makeStyles,  ThemeProvider, createTheme } from '@mui/styles';
+import { useTheme } from "@mui/system";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import styled from '@emotion/styled';
 

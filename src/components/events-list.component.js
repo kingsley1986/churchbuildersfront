@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { makeStyles } from "@mui/material/styles";
 import clsx from "clsx";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -13,7 +12,8 @@ import { red } from "@mui/material/colors";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ImageList from '@mui/material/ImageList';
 
-import { useTheme } from "@mui/material/styles";
+import {  makeStyles,  ThemeProvider, createTheme } from '@mui/styles';
+import { useTheme } from "@mui/system";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
 import moment from "moment";
