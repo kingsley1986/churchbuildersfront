@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "../components/about.css";
 
+import aboutimage from "../images/youthseigt.jpg";
+import humanitarianicon from "../images/humanitarian-aid.png";
+import charity from "../images/charity.jpg";
+
 
 export default function About(props) {
   return (
 <div>
         <meta charSet="utf-8" />
-        <title>Logistica - Shipping Company Website Template</title>
+        <title>The Church Builders</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content name="keywords" />
         <meta content name="description" />
@@ -35,12 +39,12 @@ export default function About(props) {
             <div className="row g-5 mx-lg-0">
               <div className="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style={{minHeight: '200px', height: "35rem"}}>
                 <div className="position-relative h-100">
-                  <img className="position-absolute img-fluid w-100 h-100" src="https://technext.github.io/logistica/img/about.jpg" style={{objectFit: 'cover'}} alt="" />
+                  <img className="position-absolute img-fluid w-100 h-100" src={aboutimage}  style={{objectFit: 'cover'}} alt="" />
                 </div>
               </div>
               <div className="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
                 <h6 className="text-secondary text-uppercase mb-3">About Us</h6>
-                <h1 className="mb-5">The Youth Builders</h1>
+                <h1 className="mb-5">The Church Builders</h1>
                 <div className="row g-4 mb-5">
                   <div className="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
                     <i className="fa fa-globe fa-3x text-primary mb-3" />
@@ -49,7 +53,9 @@ export default function About(props) {
                     </p>
                   </div>
                   <div className="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                    <i className="bi bi-cart4 fa-3x text-primary mb-3" />
+                    
+                    {/* <i className="bi bi-cart4 fa-3x text-primary mb-3" /> */}
+                    <img  src={humanitarianicon} className="fa-3x text-primary mb-3"  style={{width: 70}}></img>
                     <h5>Humanitarian</h5>
                     <p className="m-0">We believe in the gospel of compassion, love and sharing like Jesus did. We help the poor with food, and help those in need.
                     </p>
@@ -59,8 +65,10 @@ export default function About(props) {
               </div>
                 <p className="mb-5">
 
-                  The Youth Builder is an interdenominational Christian training organisation founded in 2020.
+                  The Church Builder is an interdenominational Christian training organisation founded in 2020.
                   We are situated at Khayelitsha, a township in Cape Town, South Africa. We have members from the Townships, suburbs and USA who joins our meetings through zoom video conference call.
+                  <br></br>
+                    We are not a Sunday service church, We are a Christian organization with a focus on building people (people are the church) to be in the image of Christ, Empowering children, teenagers, kids, and adults spiritually, academically, and with skills so that they can become light in our communities and society.
 
                   <br></br>
                   We do evangelism and community outreach.
@@ -75,7 +83,7 @@ export default function About(props) {
                   <br></br>
                   <br></br>
 
-                  We have a children's ministry called Yeshua Children Ministry, under The Youth Builders. We believe that our children must be trained in the ways of God so that when they grow up they will not depart from it. we are in partnership with CBN (Christian Broadcasting Network) so they supply us with bible animated videos called SuperBook which we use to teach the kids bible visually.
+                  We have a children's ministry called Yeshua Children Ministry, under The Church Builders. We believe that our children must be trained in the ways of God so that when they grow up they will not depart from it. we are in partnership with CBN (Christian Broadcasting Network) so they supply us with bible animated videos called SuperBook which we use to teach the kids bible visually.
 
 
                      <br></br>
@@ -88,7 +96,7 @@ export default function About(props) {
                   <br></br>
                   (2) Help the youths acquire relevant skills; we want to encourage youths in our communities to obtain a skill to improve their lives.
                   <br></br>
-                  (3) Help our uneducated youths to go back to school (finish matric, night school, or tertiary education).
+                  (3) Help our uneducated youths to go back to school (finish high school, night school, or tertiary education).
                   <br></br>
                    <br></br>
                   (4) Help the youths who are struggling with substance abuse find services to help them toward sobriety.
@@ -160,7 +168,8 @@ export default function About(props) {
                   </div>
                   
                   <div className="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                    <i className="bi bi-cart4 fa-3x text-primary mb-3" />
+                    <img  src={humanitarianicon} className="fa-3x text-primary mb-3"  style={{width: 70}}></img>
+                    {/* <i className="bi bi-cart4 fa-3x text-primary mb-3" /> */}
                     <h5>Passion For the Poor</h5>
                     <p className="m-0">
                       Passionate about feeding the poor and empowering them with skills
@@ -231,7 +240,8 @@ export default function About(props) {
                   </div>
                 </div>
                 <div className="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
-                  <i className="bi bi-cart4 text-primary fa-3x flex-shrink-0" />
+                  <img  src={humanitarianicon} className="fa-3x text-primary mb-3"  style={{width: 70}}></img>
+                  {/* <i className="bi bi-cart4 text-primary fa-3x flex-shrink-0" /> */}
                   <div className="ms-4">
                     <h5>Feeding and Helping the Poor</h5>
                     <p className="mb-0">Over the years, we have spent thousands of dollars to help feed and cloth the poor, pay school fees and fix peoples houses</p>
@@ -249,7 +259,7 @@ export default function About(props) {
               </div>
               <div className="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style={{minHeight: '400px'}}>
                 <div className="position-relative h-100">
-                  <img className="position-absolute img-fluid w-100 h-100" src="https://technext.github.io/logistica/img/feature.jpg" style={{objectFit: 'cover'}} alt="" />
+                  <img className="position-absolute img-fluid w-100 h-100" src={charity} style={{objectFit: 'cover'}} alt="" />
                 </div>
               </div>
             </div>
