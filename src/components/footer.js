@@ -62,9 +62,7 @@ export default function Footer(props) {
                 </div>
                 <div className="footer-text">
                   <p>
-                    Lorem ipsum dolor sit amet, consec tetur adipisicing elit,
-                    sed do eiusmod tempor incididuntut consec tetur adipisicing
-                    elit,Lorem ipsum dolor sit amet.
+                   The Church Builder is an interdenominational Christian training organisation founded in 2020. We are situated at Khayelitsha, a township in Cape Town
                   </p>
                 </div>
                 <div className="footer-social-icon">
