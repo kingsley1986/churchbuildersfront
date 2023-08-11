@@ -132,7 +132,7 @@ export default function ProgramComments(props) {
 
     axios
       .delete(
-        "https://cryptic-shelf-72177.herokuapp.com/programs/" + id + "/delete"
+        "https://churchbuildersbackend.fly.dev/programs/" + id + "/delete"
       )
 
       .then(function (response) {
@@ -149,7 +149,7 @@ export default function ProgramComments(props) {
   useEffect(() => {
     axios
       .get(
-        "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+        "https://churchbuildersbackend.fly.dev/programs/" +
         id +
         "/programcommentsapi"
       )
@@ -165,7 +165,7 @@ export default function ProgramComments(props) {
   const onPageLoad = () => {
     axios
       .get(
-        "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+        "https://churchbuildersbackend.fly.dev/programs/" +
         id +
         "/programcommentsapi"
       )
@@ -205,7 +205,7 @@ export default function ProgramComments(props) {
 
       axios
         .post(
-          "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+          "https://churchbuildersbackend.fly.dev/programs/" +
           id +
           "/createcommentapi",
           { name: name, description: eventDescription, token }

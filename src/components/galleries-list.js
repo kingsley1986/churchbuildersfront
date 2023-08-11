@@ -64,7 +64,7 @@ export default function Gallery() {
 
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/galleries/api")
+      .get("https://churchbuildersbackend.fly.dev/galleries/api")
       .then((response) => {
         setGalleryData([...response.data]);
       })

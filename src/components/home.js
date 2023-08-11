@@ -142,7 +142,7 @@ export default function Home(props) {
 
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/programs/api")
+      .get("https://churchbuildersbackend.fly.dev/programs/api")
       .then((response) => {
         setProgramData([...response.data]);
       })
@@ -153,7 +153,7 @@ export default function Home(props) {
 
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/events/api")
+      .get("https://churchbuildersbackend.fly.dev/events/api")
       .then((response) => {
         setSlides([...response.data]);
         console.log(response.data);
@@ -164,7 +164,7 @@ export default function Home(props) {
   }, []);
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/events/lives")
+      .get("https://churchbuildersbackend.fly.dev/events/lives")
       .then((response) => {
         setLiveEvent([...response.data]);
         console.log(response.data);

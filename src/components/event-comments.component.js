@@ -139,7 +139,7 @@ export default function EventAndComments(props) {
   useEffect(() => {
     axios
       .get(
-        "https://cryptic-shelf-72177.herokuapp.com/events/" +
+        "https://churchbuildersbackend.fly.dev/events/" +
         id +
         "/eventcomments/api"
       )
@@ -156,7 +156,7 @@ export default function EventAndComments(props) {
   const onPageLoad = () => {
     axios
       .get(
-        "https://cryptic-shelf-72177.herokuapp.com/events/" +
+        "https://churchbuildersbackend.fly.dev/events/" +
         id +
         "/eventcomments/api"
       )
@@ -234,7 +234,7 @@ export default function EventAndComments(props) {
 
       axios
         .post(
-          "https://cryptic-shelf-72177.herokuapp.com/events/" +
+          "https://churchbuildersbackend.fly.dev/events/" +
           id +
           "/eventcomment",
           { name: name, description: eventDescription, token }
@@ -258,7 +258,7 @@ export default function EventAndComments(props) {
 
   const updateGoing = (going) => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/events/" + id + "/going")
+      .get("https://churchbuildersbackend.fly.dev/events/" + id + "/going")
       .then((response) => {
         setEventData(response.data);
       });
@@ -282,7 +282,7 @@ export default function EventAndComments(props) {
 
     axios
       .delete(
-        "https://cryptic-shelf-72177.herokuapp.com/events/" + id + "/delete"
+        "https://churchbuildersbackend.fly.dev/events/" + id + "/delete"
       )
 
       .then(function (response) {

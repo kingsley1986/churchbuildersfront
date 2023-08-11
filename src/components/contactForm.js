@@ -41,7 +41,7 @@ export default function ContactForm(props) {
       console.log(formValues);
 
       axios
-        .post("https://cryptic-shelf-72177.herokuapp.com/contact_form", {
+        .post("https://churchbuildersbackend.fly.dev/contact_form", {
          ...formValues,
           token,
         })
